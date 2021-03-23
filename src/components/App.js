@@ -1,5 +1,6 @@
 import React, {Component } from 'react';
 import Form from './Form';
+import List from './List';
 
 export default class App extends Component {
   render() {
@@ -7,6 +8,8 @@ export default class App extends Component {
       <div className="App">
         <h1>React To Do</h1>
         <Form />
+
+        <List />
       </div>
     );
   } 
