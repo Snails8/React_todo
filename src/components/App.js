@@ -13,8 +13,13 @@ export default class App extends Component {
 
   // データ保存
   handleAdd(e){
-    console.log(e.target.title.value);
     e.preventDefault();
+    // formのデータをpush
+    this.state.todo.push({title: e.target.title.value});
+    // stateに上書き
+    this.setState({todo: this.state.todo});
+    // value空に
+    e.target.title.value = '';
   }
   render() {
     return (
