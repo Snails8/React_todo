@@ -9,6 +9,7 @@ export default class App extends Component {
           todo: []
       };
       this.handleAdd = this.handleAdd.bind(this);
+      this.handleRemove = this.handleRemove.bind(this);
   }
 
   // データ保存
@@ -21,6 +22,14 @@ export default class App extends Component {
     // value空に
     e.target.title.value = '';
   }
+
+  handleRemove(i) {
+      // todo配列からi番目から1つ目のデータの除外
+      this.state.todo.slice(i,1);
+      // setStateでtodo配列を上書き
+      this.setState({todo: this.state.todo})
+  }
+
   render() {
     return (
       <div className="App">
