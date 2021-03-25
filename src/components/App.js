@@ -25,9 +25,11 @@ export default class App extends Component {
     return (
       <div className="App">
         <h1>React To Do App</h1>
+          
         <Form handleAdd={this.handleAdd}/>
 
-        <List />
+        // 子へstate 変数todoを渡す
+        <List this.state.todo/>
       </div>
     );
   } 
